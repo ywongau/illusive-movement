@@ -1,5 +1,5 @@
 {
-  "name": "flash-card",
+  "name": "dizzy-text",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,10 +40,13 @@
   },
   "devDependencies": {
     "@babel/register": "^7.17.7",
+    "@ocl/rewiremock": "^1.0.1",
     "chai": "^4.3.6",
+    "code-point-at": "^2.0.0",
     "cross-env": "^7.0.3",
     "jsdom-global": "^3.0.2",
     "mocha": "^10.0.0",
+    "node-sass": "^7.0.3",
     "rewiremock": "^3.14.3",
     "sinon": "^14.0.0"
   }
