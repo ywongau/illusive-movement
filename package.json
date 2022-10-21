@@ -2,6 +2,7 @@
   "name": "dizzy-text",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/cra-gpages-actions-starting",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -18,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     "chai": "^4.3.6",
     "code-point-at": "^2.0.0",
     "cross-env": "^7.0.3",
+    "gh-pages": "^4.0.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^10.0.0",
     "node-sass": "^7.0.3",
