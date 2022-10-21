@@ -3,7 +3,7 @@ $color: #1275f2;
 $lowContrastShadow: #fff;
 
 .IllusiveText {
-  font-size: 56px;
+  font-size: 72px;
   display: flex;
   flex-wrap: wrap;
   color: $color;
@@ -62,7 +62,7 @@ textarea {
       $offset $offset $blur $lowContrastShadow;
   }
 }
-@include shadows(2px, 2px);
+@include shadows(3px, 3px);
 
 @media (max-width: 768px) {
   .IllusiveText {
