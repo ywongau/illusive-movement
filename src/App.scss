@@ -1,8 +1,6 @@
 $bgcolor: #e0e10c;
 $color: #1275f2;
-$lowContrastShadow: #ffd;
-$blur: 3px;
-$offset: 3px;
+$lowContrastShadow: #fff;
 
 .IllusiveText {
   font-size: 56px;
@@ -25,7 +23,8 @@ textarea {
 
 @mixin shadows($offset, $blur) {
   .n {
-    text-shadow: 0px (-$offset) $blur #000, 0 $offset $blur $lowContrastShadow;
+    text-shadow: 0px (-$offset - 1) $blur #000,
+      0 ($offset + 1) $blur $lowContrastShadow;
   }
 
   .ne {
@@ -63,14 +62,13 @@ textarea {
       $offset $offset $blur $lowContrastShadow;
   }
 }
-@include shadows(3px, 3px);
+@include shadows(2px, 2px);
 
 @media (max-width: 768px) {
   .IllusiveText {
     font-size: 48px;
     padding: 48px;
   }
-  @include shadows(2px, 2px);
 }
 
 @media (max-width: 480px) {
@@ -78,5 +76,4 @@ textarea {
     font-size: 32px;
     padding: 32px;
   }
-  @include shadows(2px, 2px);
 }
