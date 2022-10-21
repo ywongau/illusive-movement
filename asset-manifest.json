@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cra-gpages-actions-starting/static/css/main.70796849.css",
-    "main.js": "/cra-gpages-actions-starting/static/js/main.bac84cb1.js",
-    "static/js/787.82cd8ba2.chunk.js": "/cra-gpages-actions-starting/static/js/787.82cd8ba2.chunk.js",
-    "index.html": "/cra-gpages-actions-starting/index.html",
-    "main.70796849.css.map": "/cra-gpages-actions-starting/static/css/main.70796849.css.map",
-    "main.bac84cb1.js.map": "/cra-gpages-actions-starting/static/js/main.bac84cb1.js.map",
-    "787.82cd8ba2.chunk.js.map": "/cra-gpages-actions-starting/static/js/787.82cd8ba2.chunk.js.map"
+    "main.css": "/dizzy-text/static/css/main.70796849.css",
+    "main.js": "/dizzy-text/static/js/main.8c8ab436.js",
+    "static/js/787.82cd8ba2.chunk.js": "/dizzy-text/static/js/787.82cd8ba2.chunk.js",
+    "index.html": "/dizzy-text/index.html",
+    "main.70796849.css.map": "/dizzy-text/static/css/main.70796849.css.map",
+    "main.8c8ab436.js.map": "/dizzy-text/static/js/main.8c8ab436.js.map",
+    "787.82cd8ba2.chunk.js.map": "/dizzy-text/static/js/787.82cd8ba2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70796849.css",
-    "static/js/main.bac84cb1.js"
+    "static/js/main.8c8ab436.js"
   ]
 }
