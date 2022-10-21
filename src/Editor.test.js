@@ -23,7 +23,7 @@ describe("Editor", () => {
     sinon.assert.calledWith(IllusiveText, { text: "" });
   });
 
-  it.only("should show default text if provided", () => {
+  it("should show default text if provided", () => {
     renderComponent({ defaultText: "banana" });
     sinon.assert.calledWith(IllusiveText, { text: "banana" });
     screen.getByDisplayValue("banana");

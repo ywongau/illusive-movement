@@ -15,10 +15,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=test mocha --watch --spec src/**/*.test.js",
+    "dev": "cross-env NODE_ENV=test mocha --watch --spec src/**.test.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env NODE_ENV=test mocha --spec src/*.test.js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
