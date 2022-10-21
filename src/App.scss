@@ -1,8 +1,18 @@
 $bgcolor: #e0e10c;
 $color: #1275f2;
-$lowContrastShadow: #fff;
-$blur: 4px;
+$lowContrastShadow: #ffd;
+$blur: 3px;
 $offset: 3px;
+
+.IllusiveText {
+  font-size: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $color;
+  padding: 64px;
+  font-family: monospace;
+}
+
 .App {
   text-align: center;
   background-color: $bgcolor;
@@ -13,46 +23,60 @@ textarea {
   height: 4em;
 }
 
-.IllusiveText {
-  margin-top: 16px;
-  font-size: 56px;
-  display: flex;
-  flex-wrap: wrap;
-  color: $color;
-  padding: 64px;
-  font-family: monospace;
+@mixin shadows($offset, $blur) {
+  .n {
+    text-shadow: 0px (-$offset) $blur #000, 0 $offset $blur $lowContrastShadow;
+  }
+
+  .ne {
+    text-shadow: $offset (-$offset) $blur #000,
+      (-$offset) $offset $blur $lowContrastShadow;
+  }
+
+  .e {
+    text-shadow: ($offset + 1) 0px $blur #000,
+      (-$offset - 1) 0px $blur $lowContrastShadow;
+  }
+
+  .se {
+    text-shadow: $offset $offset $blur #000,
+      (-$offset) (-$offset) $blur $lowContrastShadow;
+  }
+
+  .s {
+    text-shadow: 0px ($offset + 1) $blur #000,
+      0 (-$offset - 1) $blur $lowContrastShadow;
+  }
+
+  .sw {
+    text-shadow: (-$offset) $offset $blur #000,
+      $offset (-$offset) $blur $lowContrastShadow;
+  }
+
+  .w {
+    text-shadow: (-$offset - 1) 0px $blur #000,
+      ($offset + 1) 0px $blur $lowContrastShadow;
+  }
+
+  .nw {
+    text-shadow: (-$offset) (-$offset) $blur #000,
+      $offset $offset $blur $lowContrastShadow;
+  }
+}
+@include shadows(3px, 3px);
+
+@media (max-width: 768px) {
+  .IllusiveText {
+    font-size: 48px;
+    padding: 48px;
+  }
+  @include shadows(2px, 2px);
 }
 
-.n {
-  text-shadow: 0px (-$offset) $blur #000, 0 $offset $blur $lowContrastShadow;
-}
-
-.ne {
-  text-shadow: $offset (-$offset) $blur #000,
-    (-$offset) $offset $blur $lowContrastShadow;
-}
-
-.e {
-  text-shadow: $offset 0px $blur #000, (-$offset) 0px $blur $lowContrastShadow;
-}
-
-.se {
-  text-shadow: $offset 2px $blur #000, (-$offset) -2px $blur $lowContrastShadow;
-}
-
-.s {
-  text-shadow: 0px $offset $blur #000, 0 (-$offset) $blur $lowContrastShadow;
-}
-
-.sw {
-  text-shadow: (-$offset) $offset $blur #000,
-    $offset (-$offset) $blur $lowContrastShadow;
-}
-
-.w {
-  text-shadow: (-$offset) 0px $blur #000, $offset 0px $blur $lowContrastShadow;
-}
-
-.nw {
-  text-shadow: (-$offset) -2px $blur #000, $offset 2px $blur $lowContrastShadow;
+@media (max-width: 480px) {
+  .IllusiveText {
+    font-size: 32px;
+    padding: 32px;
+  }
+  @include shadows(2px, 2px);
 }
