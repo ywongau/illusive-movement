@@ -1,7 +1,6 @@
 import React from "react";
-import { cleanup, fireEvent, screen, render } from "@testing-library/react";
-import rewiremock from "@ocl/rewiremock";
-import sinon from "sinon";
+import { cleanup, screen, render } from "@testing-library/react";
+import rewiremock from "rewiremock";
 import { expect } from "chai";
 describe("IllusiveText", () => {
   afterEach(async () => {

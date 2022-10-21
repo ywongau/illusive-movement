@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "@babel/register": "^7.17.7",
-    "rewiremock-lite": "^1.0.0",
     "chai": "^4.3.6",
     "code-point-at": "^2.0.0",
     "cross-env": "^7.0.3",

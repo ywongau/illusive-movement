@@ -1,6 +1,6 @@
 import React from "react";
 import { cleanup, fireEvent, screen, render } from "@testing-library/react";
-import rewiremock from "@ocl/rewiremock";
+import rewiremock from "rewiremock";
 import sinon from "sinon";
 describe("Editor", () => {
   afterEach(async () => {
