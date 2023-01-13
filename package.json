@@ -1,8 +1,8 @@
 {
-  "name": "dizzy-text",
+  "name": "illusive-movement",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/dizzy-text",
+  "homepage": "/illusive-movement",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
