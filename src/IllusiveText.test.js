@@ -15,7 +15,7 @@ describe("IllusiveText", () => {
   const Component = rewiremock.proxy(() => require("./IllusiveText")).default;
 
   const renderComponent = (props) =>
-    render(<Component mode="Random" {...props} />);
+    render(<Component mode="random" {...props} />);
 
   // give text: 'One two three'
   // renders <span>One</span> <span>two</span> <span>three</span>
@@ -34,6 +34,7 @@ describe("IllusiveText", () => {
   // n ne e se s sw w nw
   it("should assign class names to each word for rotating directions", () => {
     renderComponent({ text: "One Two Three Four Five Six Seven Eight Nine" });
+    // screen.debug();
     expect(screen.getByText("One").className).to.equal("n");
     expect(screen.getByText("Two").className).to.equal("ne");
     expect(screen.getByText("Nine").className).to.equal("n");
@@ -52,7 +53,7 @@ describe("IllusiveText", () => {
       .returns({ y: 40 });
     renderComponent({
       text: "One Two Three Four Five Six",
-      mode: "Interweaving",
+      mode: "interweaving",
     });
     expect(screen.getByText("One").className).to.equal("ne");
     expect(screen.getByText("Two").className).to.equal("ne");
@@ -62,5 +63,27 @@ describe("IllusiveText", () => {
 
     expect(screen.getByText("Five").className).to.equal("ne");
     expect(screen.getByText("Six").className).to.equal("ne");
+  });
+
+  it("should replace line break in text input to <br>", () => {
+    renderComponent({ text: "One\ntwo" });
+    const ele = screen.getByText("One");
+    expect(ele.nextElementSibling.tagName).to.equal("BR");
+  });
+
+  it("should not have an extra empty space at the end", async () => {
+    renderComponent({ text: "One" });
+    expect(screen.getByText("One").nextSibling).to.equal(null);
+  });
+
+  it("should split every character if spaceless is set to true", () => {
+    renderComponent({ text: "这是", spaceless: true });
+    screen.getByText("这");
+  });
+
+  it("should render spaceless text correctly when switched from non-spaceless mode", () => {
+    const { rerender } = renderComponent({ text: "联合国", spaceless: false });
+    rerender(<Component mode="random" text="联合国" spaceless={true} />);
+    expect(screen.getByText("合").className).to.equal("ne");
   });
 });

@@ -4,7 +4,7 @@ $lowContrastShadow: #fff;
 
 .IllusiveText {
   font-size: 72px;
-  display: flex;
+  word-break: break-word;
   flex-wrap: wrap;
   color: $color;
   padding: 64px;

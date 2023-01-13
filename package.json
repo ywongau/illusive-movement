@@ -15,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "test:mutation": "stryker run",
     "dev": "cross-env NODE_ENV=test mocha --watch --spec src/**.test.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -43,6 +44,8 @@
   },
   "devDependencies": {
     "@babel/register": "^7.17.7",
+    "@stryker-mutator/core": "^6.3.1",
+    "@stryker-mutator/mocha-runner": "^6.3.1",
     "chai": "^4.3.6",
     "code-point-at": "^2.0.0",
     "cross-env": "^7.0.3",
